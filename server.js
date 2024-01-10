@@ -7,7 +7,7 @@ const io = require("socket.io")(server, { path: "/", cookie: false });
 const peerConfig = require("./peer-config");
 
 //
-const port = process.env.LISTEN_PORT || 4999;
+const port = process.env.LISTEN_PORT || 443;
 
 // Enable CORS
 io.set("origins", "*:*");
