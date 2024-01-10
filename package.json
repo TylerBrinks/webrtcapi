@@ -1,0 +1,20 @@
+{
+  "name": "server",
+  "version": "1.2.0",
+  "author": "Jan Ole Suhr <ole@janole.com> (https://janole.com)",
+  "license": "MIT",
+  "imageBase": "janole/video-chat-",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server",
+    "docker:build": "docker build -t ${IMAGE_BASE:-$npm_package_imageBase}backend:${IMAGE_VERSION:-$(npm run --silent version)} .",
+    "version": "echo $(echo $npm_package_version | sed 's/\\.[0-9]*$//').$(git rev-list HEAD --count)"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "socket.io": "^2.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
