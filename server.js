@@ -10,11 +10,13 @@ const peerConfig = require("./peer-config");
 const port = process.env.LISTEN_PORT || 443;
 
 // Enable CORS
-io.set("origins", "*:*");
+//io.set("origins", "*:*");
 
 //
 server.listen(port);
-
+app.get("/test", (req, res, next) => {
+    res.json(["Tony","Lisa","Michael","Ginger","Food"]);
+   });
 //
 console.log("* Server started on " + port);
 
