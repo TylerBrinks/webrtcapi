@@ -14,7 +14,8 @@ console.log(port);
 console.log("@@##@#@#@#");
 
 app.get("/test", (req, res, next) => {
-    res.json(["Tony","Lisa","Michael","Ginger","Food"]);
+    console.log(peerConfig);
+    res.json(["a","b","c","d","e"]);
    });
 // Enable CORS
 //io.set("origins", "*:*");
