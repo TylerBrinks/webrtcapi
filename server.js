@@ -7,7 +7,7 @@ const io = require("socket.io")(server);
 const peerConfig = require("./peer-config");
 
 //
-const port = process.env.LISTEN_PORT || 443;
+const port = process.env.PORT || 3001;
 app.get("/test", (req, res, next) => {
     res.json(["Tony","Lisa","Michael","Ginger","Food"]);
    });
