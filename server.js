@@ -17,7 +17,7 @@ app.get("/test", (req, res, next) => {
     res.json(["Tony","Lisa","Michael","Ginger","Food"]);
    });
 // Enable CORS
-io.set("origins", "*:*");
+//io.set("origins", "*:*");
 
 //
 server.listen(port);
