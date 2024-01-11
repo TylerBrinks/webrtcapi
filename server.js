@@ -8,6 +8,11 @@ const peerConfig = require("./peer-config");
 
 //
 const port = process.env.PORT || 3001;
+
+console.log("THE PORT");
+console.log(port);
+console.log("@@##@#@#@#");
+
 app.get("/test", (req, res, next) => {
     res.json(["Tony","Lisa","Michael","Ginger","Food"]);
    });
