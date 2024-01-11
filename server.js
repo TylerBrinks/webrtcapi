@@ -1,22 +1,22 @@
 //
 const app = require("express")();
 const server = require("http").Server(app);
-const io = require("socket.io")(server, { path: "/", cookie: false });
+const io = require("socket.io")(server);
 
 //
 const peerConfig = require("./peer-config");
 
 //
-const port = process.env.LISTEN_PORT || 443;
-
+const port = process.env.LISTEN_PORT || 3001;
+app.get("/test", (req, res, next) => {
+    res.json(["Tony","Lisa","Michael","Ginger","Food"]);
+   });
 // Enable CORS
 //io.set("origins", "*:*");
 
 //
 server.listen(port);
-app.get("/test", (req, res, next) => {
-    res.json(["Tony","Lisa","Michael","Ginger","Food"]);
-   });
+
 //
 console.log("* Server started on " + port);
 
